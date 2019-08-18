@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+<script src="BST.js"></script>
+<script>
+    function wasFound(found, value){
+        if(found){
+            console.log(`El nodo ${value} fue encontrado en el árbol.`);
+        }
+        else{
+            console.log(`El nodo ${value} no fue encontrado en el árbol.`);            
+        }
+    }
+    bst = new BST();
+
+    bst.add(45);
+    bst.add(1);
+    bst.add(223);
+    bst.add(14);
+    bst.add(18);
+    bst.add(23);
+    bst.add(4);
+    bst.add(180);
+    bst.add(300);
+
+    wasFound(bst.search(14), 14);
+    wasFound(bst.search(241), 241);
+
+    console.log("Impresión normal:")
+    bst.print();
+    console.log("Impresión usando 'console.group()':")
+    bst.printGroup();
+
+</script>

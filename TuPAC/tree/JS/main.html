@@ -1,0 +1,35 @@
+<meta charset="utf-8">
+<script src = "tree.js"></script>
+<script>
+    tree = new Tree();
+
+    function foundNode(nodeWasFound){
+        if(nodeWasFound){
+            console.log(true);
+        }
+        else{
+            console.log(false);
+        }
+    }
+
+    tree.add(3);
+    tree.add("H");
+    tree.add("A");
+    tree.add(40, "AED");
+
+    tree.add(8, "H");
+    tree.add(10, "A");
+    tree.add("Hola", "A");
+    tree.add("test.py", 10);
+
+    tree.print();
+
+   /* foundNode0 = tree.search(10);
+    foundNode1 = tree.search(8);
+    foundNode2 = tree.search("Adios");
+
+    foundNode(foundNode0);
+    foundNode(foundNode1);
+    foundNode(foundNode2);*/
+
+</script>

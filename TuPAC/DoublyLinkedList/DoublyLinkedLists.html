@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        /******************Ejecución********************/
+
+        n1 = new Node("Primero");
+        n2 = new Node("Segundo");
+        n3 = new Node("Tercero");
+        n4 = new Node("Cuarto");
+        n5 = new Node("Quinto");
+        n6 = new Node("Sexto");
+        n7 = new Node("Septimo");
+        n8 = new Node("Octavo");
+
+        list = new DoublyLinkedList();
+        list.add(n1);
+
+        list.add(n2);
+
+        list.add(n3, "Quinto");
+
+        list.add(n4);
+
+        list.add(n5);
+
+        list.add(n6, "Segundo");
+
+        list.addToEnd(n7);
+
+        list.addToStart(n8);
+
+        console.log("\n");
+        list.runForwards();
+        console.log("\n");
+        list.runBackwards();
+
+
+    </script>
+</body>
+</html>
