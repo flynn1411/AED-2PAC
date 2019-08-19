@@ -26,17 +26,17 @@ class LinkedList:
 
 		return False
 
-	def _print(self, current = None):
+	def _print(self, current = None, trail = " "):
 		if (not current):
 			current = self.first
 
 		if (current.next):
-			print (current.value)
-			current = current.next
-			self._print(current)
+			trail = ("%s %s ->" %(trail, current.value))
+			self._print(current.next, trail)
 
 		else:
-			print (current.value)
+			trail = ("%s %s" %(trail, current.value))
+			print (trail)
 
 list = LinkedList()
 
