@@ -13,7 +13,7 @@ function HeapBuild(list = new LinkedList()){
 
         for (i = 0; i < h; i++){
             var row = [];
-            for(j = 0; j < w; j++){
+            for(let j = 0; j < w; j++){
                 row.push("&nbsp;");
             }
             matrix.push(row);
@@ -21,22 +21,25 @@ function HeapBuild(list = new LinkedList()){
 
         //Primera Fila
         matrix[0][Math.floor(w/2)] = list.atPosition(0).value;
-        
-        //Ultima fila
-        for(count = 0; count < w; count += 2){
-            for(j = mi; j < n; j++){
-                matrix[h-1][count] = list.atPosition(j).value;
-            }
-        }
 
         //filas intermedias
         for(i = 1; i < h-1; i++){
-            for(count = (Math.pow(2,h-1-i))-1; count < w; count += (Math.pow(2,h-i)-1)){
-                for(j=1; j < mi; j++){
-                    matrix[i][count] = list.atPosition(j).value;
-                }
-            }
+            positionCounter = 1;
+            for(count = (Math.pow(2,h-1-i))-1; count < matrix[i].length; count += Math.pow(2,h-i)){
+                 matrix[i][count] = list.atPosition(positionCounter).value;
+                positionCounter++;
+             }
         }
+
+        //Ultima fila
+        j=mi;
+        for(count = 0; count <= w; count +=2){
+            matrix[h-1][count] = list.atPosition(j).value;
+            j++
+        }
+        
+
+        
         this.printHeap(matrix);
 }
 

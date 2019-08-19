@@ -49,7 +49,7 @@ function LinkedListAtPosition(position){
     currentNode = this.first;
     currentPosition = 0;
     
-    if(position >= this.getLength()){
+    if(position > this.getLength()){
         return null;
     }
     else{
