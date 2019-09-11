@@ -13,7 +13,7 @@ class TreeUl:
         html = ["<ul>"]
         for k,v in json.items():
             if(isinstance(v,dict)):
-                html.append("<li>%s" % (k,))
+                html.append("<li>%s" % (k))
                 html.append(self.innerConvert(v))
                 html.append("</li>")
             else:
